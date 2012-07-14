@@ -114,7 +114,7 @@ if (check_login_status() == false) {
 	            	<input type="radio" name="rol" id="Secretaria" value="option3">Secretaria</label>
 				</div>
 	            <div class="controls">
-	            	<label>Sexo</label>
+	            	<br><label>Sexo</label>
 	            	<label class="radio inline">
 		            <input type="radio" name="sexo" id="Masculino" value="option1" checked="">Masculino</label>
 		            <label class="radio inline">
