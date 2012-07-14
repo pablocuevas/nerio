@@ -1,0 +1,15 @@
+-- Encuentras mas ejemplos en 
+-- http://www.empresario.com.mx/
+
+-- Gracias por tus comentarios.
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL auto_increment,
+  `usuario` varchar(20) NOT NULL,
+  `password` varchar(10) NOT NULL,
+  `descripcion` text character set utf8 collate utf8_spanish_ci,
+  `email` varchar(45) character set utf8 collate utf8_spanish_ci default NULL,
+  `fecha` date NOT NULL,
+  PRIMARY KEY  (`id`)
+)
