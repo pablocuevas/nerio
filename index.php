@@ -77,7 +77,7 @@ if (check_login_status() == true) {
     			<form id="login-form" method="post" action="includes/login.php"> 
     				<fieldset> 
     				<legend>NERIO</legend> 
-    				<p>Por favor, ingrse su nombre de usuario y su password</p> 
+    				<p>Por favor, ingrese su nombre de usuario y su password</p> 
     				<input type="text" name="username" id="username" placeholder="Nombre de Usuario"/>       
     				<input type="password" name="password" id="password" placeholder="Password"/> 
     				<label for="submit"> 
