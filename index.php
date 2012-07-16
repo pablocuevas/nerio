@@ -91,13 +91,21 @@ if (check_login_status() == true) {
   <!-- Carousel items -->
   <div class="carousel-inner">
     <div class="active item"><img src="images/carrusel/uno.jpg" alt="uno"/><div class="carousel-caption">
-                  <h4>Second Thumbnail label</h4>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <h4>Sala de maquinas</h4>
+                  <p>En este sector podr&aacute;s encontrar trotadoras, bicicletas est&aacute;ticas horizontales y normales, m&aacute;quina de gl&uacute;teos, m&aacute;quina para aductor y abductor, para que realices tus ejercicios, adem&aacute;s contamos con colchonetas para trabajar elongaci&oacute;n, y abdominales.</p>
                 </div></div>
     <div class="item"><img src="images/carrusel/dos.jpg" alt="dos"/><div class="carousel-caption">
-                  <h4>Second Thumbnail label</h4>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <h4>Multi Work</h4>
+                  <p>M&aacute;quina utilizada para trabajar, brazos, pectoral, espalda, cu&aacute;driceps, gl&uacute;teos.</p>
                 </div></div>
+	<div class="item"><img src="images/carrusel/tres.jpg" alt="tres"/><div class="carousel-caption">
+                  <h4>Sala Fitnes</h4>
+                  <p>Para diversas y divertidas clases o actividades grupales, como Body Combat, Clases de Baile, Localizado, Zumba, Cros fit.</p>
+                </div></div>
+    <div class="item"><img src="images/carrusel/cuatro.jpg" alt="cuatro"/><div class="carousel-caption">
+                  <h4>Sala De Spinning Indoor Ciclyng</h4>
+                  <p>Con bicicletas est&aacute;ticas Wortek, para el desarrollo las clases</p>
+                </div></div>  
   </div>
   <!-- Carousel nav -->
   <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
