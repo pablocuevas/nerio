@@ -95,44 +95,60 @@ if (check_login_status() == false) {
         <div class="span9">
           <div class="hero-unit">
             <h1>Bienvenido</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+            <!--<p>//</p>
+            <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p> -->
           </div>
           <div class="row-fluid">
+		  <div style="text-align:justify">
             <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
+              <h2>Ficha de Evaluaci&oacute;n</h2>
+              <p>En esta secci&oacute;n mantendr&aacute;n actualizada la informaci&oacute;n respecto a las fichas de evaluaci&oacute;n de cada socio del gimnasio: Peso, porcentaje de grasa, magno, Imc (&iacute;ndice de masa muscular Icc (&iacute;ndice cintura cadera)</p>
+              </br></br><p><a class="btn" href="#">Ingresa aqu&iacute; &raquo;</a></p>
             </div><!--/span-->
             <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
+              <h2>Ficha Anamnesis</h2>
+              <p>Informaci&oacute;n m&eacute;dica de cada socio, utilizada para manejar el adecuado asesoramiento, de las actividades f&iacute;sicas que podr&iacute;a realizar cada socio, los datos contenidos pueden ser: fuma (frecuencia), alcohol (Frecuencia), alerg&iacute;as, medicamentos enfermedades</p>
+              </br><p><a class="btn" href="#">Ingresa aqu&iacute; &raquo;</a></p>
             </div><!--/span-->
             <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
+              <h2>Rutina Cardiovascular</h2>
+              <p>Ingreso de las rutinas que correspondan, dependiendo del nivel o avance que vaya presentando cada socio, har&aacute;n referencia al tipo de ejercicio cardiovascular, aqu&iacute; podr&aacute;n aumentar o disminuir los programas y tiempos de ejecuci&oacute;n, se asignara la m&aacute;quina a utilizar, el nivel y el tiempo que permanecer&aacute; realizando el ejercicio</p>
+              <p><a class="btn" href="#">Ingresa aqu&iacute; &raquo;</a></p>
             </div><!--/span-->
           </div><!--/row-->
           <div class="row-fluid">
+		  <div style="text-align:justify">
             <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
+              <h2>Rutina Muscular</h2>
+              <p>Al igual que las Rutinas Cardiovascular, deber&aacute;n mantener los programas de ejercicios musculares, los cuales se podr&aacute;n aumentar o disminuir tanto los programas y tiempos de ejecuci&oacute;n, va a depender del ejercicio asignado, como abdominales los cuales se realizaran por una cantidad de repeticiones, diferentes tipos o por tiempo</p>
+              <p><a class="btn" href="#">Ingresa aqu&iacute; &raquo;</a></p>
             </div><!--/span-->
             <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
+              <h2>Clases</h2>
+              <p>Este m&oacute;dulo contendr&aacute; la informaci&oacute;n, de cada clase que se imparta en el gimnasio, como Zumaba, Body Combat, Spinning, Crossfit, Aero Box, Localizado, entre otras, lo cual constara con los horarios y los d&iacute;as que se efect&uacute;an.</p>
+              </br></br><p><a class="btn" href="#">Ingresa aqu&iacute; &raquo;</a></p>
             </div><!--/span-->
             <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
+              <h2>Inventario</h2>
+              <p>Registro y mantenci&oacute;n de insumos, maquinarias e implementos en el gimnasio, valores de inscripci&oacute;n y aranceles, como as&iacute; los productos a las venta como bebidas, mu&ntilde;equeras, poleras, colet</p>
+              </br></br></br><p><a class="btn" href="#">Ingresa aqu&iacute; &raquo;</a></p>
             </div><!--/span-->
+			<div class="row-fluid">
+		  <div style="text-align:justify">
+			<div class="span4">
+              <h2>Control de clases</h2>
+              <p>Control de asistencia de cada socio, y adem&aacute;s a las clases a las cuales asiste si es as&iacute;, en caso contrario realizar&aacute;n ejercicios en sala (Rutinas cardiovascular y muscular)</p>
+              </br></br><p><a class="btn" href="#">Ingresa aqu&iacute; &raquo;</a></p>
+            </div><!--/span-->
+			<div class="span4">
+              <h2>Pagos</h2>
+              <p>Los pagos de cada socio, es indispensable controlarlos, as&iacute; estar&aacute;n al corriente cuando corresponde la cancelaci&oacute;n de la mensualidad de cada uno.</p>
+              </br></br><p><a class="btn" href="#">Ingresa aqu&iacute; &raquo;</a></p>
+            </div><!--/span-->			
           </div><!--/row-->
         </div><!--/span-->
+	  </div><!--/style-->
+	  </div><!--/style-->
       </div><!--/row-->
 
       <hr>
