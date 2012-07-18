@@ -217,6 +217,7 @@ if (check_login_status() == false) {
 	            <label>Observaciones</label>
 	            <textarea name="observacion" id="observacion" class="input-xlarge" id="textarea" rows="6"></textarea>
 	            <br>
+	            <input name="tipoficha" id="tipoficha" type="hidden" value="muscular"/>
 		        <button type="submit" class="btn btn-success">Agregar Ficha</button>
 		    </form>
 		    

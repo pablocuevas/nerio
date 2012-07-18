@@ -123,10 +123,10 @@ if (check_login_status() == false) {
         <p>&copy; PPJ 2012</p>
       </footer>
 
-    <div class="modal hide fade" id="myModal">
+    <div class="modal hide fade" id="modalEditar">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal">x</button>
-    <h3>Modal header</h3>
+    <h3>Editar Usuario</h3>
   </div>
   <div class="modal-body">
     <p>One fine body…</p>
@@ -134,6 +134,19 @@ if (check_login_status() == false) {
   <div class="modal-footer">
     <a href="#" class="btn" data-dismiss="modal">Close</a>
     <a href="#" class="btn btn-primary">Save changes</a>
+  </div>
+</div>
+
+<div class="modal hide fade" id="modalEliminar">
+  <div class="modal-header">
+    <h3>Eliminar Usuario</h3>
+  </div>
+  <div class="modal-body">
+    <p>Esta Seguro de eliminar este usuario</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn btn-danger" data-dismiss="modal">Eliminar</a>
+    <a href="#" class="btn" data-dismiss="modal" >Cancelar</a>
   </div>
 </div>
 

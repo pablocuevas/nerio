@@ -54,7 +54,7 @@ function mostrarUsuarios(){
               
    while ($row = $result->fetch_assoc()){
               
-    	$tabla_usuarios .= "<tbody><tr><td>" . $row['usuario'] . "</td><td>" . $row['nombre']. "</td><td>" . $row['apellido']. "</td><td>" . $row['fecha_nac']. "</td><td>" . $row['fono_1']. '<td> <a class="btn" data-toggle="modal" href="#myModal" ><i class="icon-trash"></i></a> <a class="btn" data-toggle="modal" href="#myModal" ><i class="icon-pencil"></i></a> <a class="btn" data-toggle="modal" href="#myModal" ><i class="icon-search"></i></a></td></tr>';
+    	$tabla_usuarios .= "<tbody><tr><td>" . $row['usuario'] . "</td><td>" . $row['nombre']. "</td><td>" . $row['apellido']. "</td><td>" . $row['fecha_nac']. "</td><td>" . $row['fono_1']. '<td> <a class="btn" data-toggle="modal" href="#modalEliminar" ><i class="icon-trash"></i></a> <a class="btn" data-toggle="modal" href="#modalEditar" ><i class="icon-pencil"></i></a></i></a></td></tr>';
                      
     }
    
