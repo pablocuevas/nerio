@@ -9,11 +9,11 @@ require_once('../../includes/functions.inc.php');
 // If logged in, unset session variable and display logged-out message 
 if (check_login_status() == false) { 
               // Redirect to 
-              redirect('../../index.php'); 
+              redirect('home'); 
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <title>NERIO</title>
@@ -45,12 +45,7 @@ if (check_login_status() == false) {
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../../assets/ico/apple-touch-icon-57-precomposed.png">
-    
-    <script type="text/javascript">
-    	$('#myModal').modal('hide')
-    </script>
   </head>
-  
 
   <body>
 
@@ -62,7 +57,6 @@ if (check_login_status() == false) {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          
           <a class="brand" href="../../index.php">NERIO</a>
           <div class="btn-group pull-right">
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
@@ -93,49 +87,94 @@ if (check_login_status() == false) {
             <ul class="nav nav-list">
               <li class="nav-header">Acciones</li>
               <li><a href="administrador.php">Inicio</a></li>
-              <li><a href="addUsers.php"><i class="icon-plus"></i>Agregar Usuarios</a></li>
-              <li class="active"><a href="admUsers.php"><i class="icon-pencil"></i>Administrar Usuarios</a></li>
+              <li class="active"><a href="addUsers.php"><i class="icon-plus"></i>Agregar Usuarios</a></li>
+              <li><a href="admUsers.php"><i class="icon-pencil"></i>Administrar Usuarios</a></li>
               <li class="nav-header">Reportes</li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
-        	<?php echo(mostrarUsuarios()) ?>
-        	
-			<ul class="pager">
-				<li class="previous disabled">
-					<a href="#">&larr; Older</a>
-				</li>
-				<li class="next disabled">
-					<a href="#">Newer &rarr;</a>
-				</li>
-			</ul>
-
-
-			   
+		<h1>Ficha Evaluci&oacute;n</h1>
+            <form class="well" name="insertUser" method="POST" action="insertUser.php">
+			
+				<label> Fecha</label>
+	            <select id="dia" name="dia" class="span2 inline" style="display:inline;">
+	            <?php
+		            for($d=1;$d<=31;$d++)
+		            {
+			            if($d<10)
+			            $dd = "0" . $d;
+			            else
+			            $dd = $d;
+			            echo "<option value='$dd'>$dd</option>";
+			        }
+			    ?>
+			    </select>
+			    
+			    <select id="mes" name="mes" class="span2 inline" style="display:inline;">
+			    <?php
+				    for($m = 1; $m<=12; $m++)
+				    {
+					if($m<10)
+						$me = "0" . $m;
+					else
+						$me = $m;
+					switch($me)
+					{
+						case "01": $mes = "Enero"; break;
+						case "02": $mes = "Febrero"; break;
+						case "03": $mes = "Marzo"; break;
+						case "04": $mes = "Abril"; break;
+						case "05": $mes = "Mayo"; break;
+						case "06": $mes = "Junio"; break;
+						case "07": $mes = "Julio"; break;
+						case "08": $mes = "Agosto"; break;
+						case "09": $mes = "Septiembre"; break;
+						case "10": $mes = "Octubre"; break;
+						case "11": $mes = "Noviembre"; break;
+						case "12": $mes = "Diciembre"; break;			
+					}
+					echo "<option value='$me'>$mes</option>";
+					}
+				?>
+				</select>
+				
+				<select id="anio" name="anio" class="span2 inline" style="display:inline;">
+				<?php
+					$tope = date("Y");
+					$edad_max = 45;
+					$edad_min = 0;
+					for($a= $tope - $edad_max; $a<=$tope - $edad_min; $a++)
+					echo "<option value='$a'>$a</option>"; 
+				?>
+				</select>
+	          	       		            
+	            <label>Peso</label>
+					<input name="peso" id="peso" type="text" class="span5" placeholder=".....">
+	            <label>Graso</label>
+					<input name="graso" id="graso" type="text" class="span5" placeholder=".....">
+				<label>Magro</label>
+					<input name="magro" id="magro" type="text" class="span5" placeholder=".....">
+				<label>Imc</label>
+					<input name="imc" id="imc" type="text" class="span5" placeholder=".....">
+				<label>Icc</label>
+					<input name="icc" id="icc" type="text" class="span5" placeholder=".....">
+				<label>Observaciones</label>
+					<input name="observacion" id="observacion" type="text" class="span5" placeholder=".....">
+	            <br>
+		        <button type="submit" class="btn btn-success">Agregar Ficha</button>
+		    </form>
+		    
         </div><!--/span-->
-        
       </div><!--/row-->
+
       <hr>
-      
 
       <footer>
-        <p>&copy; PAPAJA 2012</p>
+        <p>&copy; PPJ 2012</p>
       </footer>
 
-    <div class="modal hide fade" id="myModal">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">×</button>
-    <h3>Modal header</h3>
-  </div>
-  <div class="modal-body">
-    <p>One fine body…</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#" class="btn" data-dismiss="modal">Close</a>
-    <a href="#" class="btn btn-primary">Save changes</a>
-  </div>
-</div>
+    </div><!--/.fluid-container-->
 
     <!-- Le javascript
     ================================================== -->
@@ -153,7 +192,6 @@ if (check_login_status() == false) {
     <script src="../../assets/js/bootstrap-collapse.js"></script>
     <script src="../../assets/js/bootstrap-carousel.js"></script>
     <script src="../../assets/js/bootstrap-typeahead.js"></script>
-    <script type="text/javascript">$('#myModal').modal(show)</script>
 
   </body>
 </html>
