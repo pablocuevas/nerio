@@ -156,20 +156,16 @@ if (check_login_status() == false) {
 		      
 		      
 		 if($result == 'true'){
-			echo( '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button><strong>Muy bien!</strong> El usuario'. $_POST["nombre_usuario"] .' ha sido creado exitosamente</div>');			 
+			echo( '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button><strong>Muy bien!</strong> El usuario '. $_POST["nombre_usuario"] .' ha sido creado exitosamente</div>');			 
 		 }else{			 
 			echo(' <div class="alert alert-error"><button type="button" class="close" data-dismiss="alert">×</button><strong>Error</strong>Intente crear nuevamente el usuario</div>');
 		 }
 		 }else{
-			 echo(' <div class="alert alert-error"><button type="button" class="close" data-dismiss="alert">×</button><strong>Error</strong>Intente crear nuevamente el usuario</div>');
+			 echo(' <div class="alert alert-error"><button type="button" class="close" data-dismiss="alert">×</button><strong>Error </strong>Intente crear nuevamente el usuario</div>');
 
 		 }
          ?>
-         
-      
-
-
-           		    
+          		    
         </div><!--/span-->
       </div><!--/row-->
 
