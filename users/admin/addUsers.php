@@ -60,13 +60,14 @@ if (check_login_status() == false) {
           <a class="brand" href="../../index.php">NERIO</a>
           <div class="btn-group pull-right">
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-              <i class="icon-user"></i> Administrador
+              <i class="icon-user"></i>
+              <?php print_r($_SESSION['nombre_usuario']); ?>
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
               <li><a href="#">Perfil</a></li>
               <li class="divider"></li>
-              <li><a href="../includes/logout.php">Salir</a></li>
+              <li><a href="../../includes/logout.php">Salir</a></li>
             </ul>
           </div>
           <div class="nav-collapse">
@@ -93,17 +94,17 @@ if (check_login_status() == false) {
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
-            <form class="well">
+            <form class="well" name="insertUser" method="POST" action="insertUser.php">
 	            <label>Nombres</label>
-	            <input name="" type="text" class="span5" placeholder=".....">
+	            <input name="nombres" id="nombres" type="text" class="span5" placeholder=".....">
 	            <label>Apellidos</label>
-	            <input type="text" class="span5" placeholder=".....">
+	            <input name="apellidos" id="apellidos" type="text" class="span5" placeholder=".....">
 	            <label>E-Mail</label>
-	            <input type="text" class="span5" placeholder="pedro.perez@email.com">
+	            <input name="email" id="email" type="text" class="span5" placeholder="pedro.perez@email.com">
 	            <label>Nombre de Usuario</label>
-	            <input type="text" class="span5" placeholder="nombre.apellido">
+	            <input name="nombre_usuario" id="nombre_usuario" type="text" class="span5" placeholder="nombre.apellido">
 	            <label>Contraseña</label>
-	            <input type="text" class="span5" placeholder=".....">
+	            <input name="contrasenia" id="contrasenia" type="text" class="span5" placeholder=".....">
 	            <div class="controls">
 	            	<label>Rol</label>
 		            <label class="radio inline">
@@ -113,8 +114,9 @@ if (check_login_status() == false) {
 	            	<label class="radio inline">
 	            	<input type="radio" name="rol" id="Secretaria" value="option3">Secretaria</label>
 				</div>
+				<br>
 	            <div class="controls">
-	            	<br><label>Sexo</label>
+	            	<label>Sexo</label>
 	            	<label class="radio inline">
 		            <input type="radio" name="sexo" id="Masculino" value="option1" checked="">Masculino</label>
 		            <label class="radio inline">
@@ -124,14 +126,14 @@ if (check_login_status() == false) {
                 <div class="controls">
 	            	<label>Estado Civil</label>
 	            	<label class="radio inline">
-	            	<input type="radio" name="estado_civil" id="Masculino" value="option1" checked="">Soltero</label>
+	            	<input type="radio" name="estado_civil" id="Soltero" value="option1" checked="">Soltero</label>
 	            	<label class="radio inline">
-	            	<input type="radio" name="estado_civil" id="Femenino" value="option2">Casado</label>
+	            	<input type="radio" name="estado_civil" id="Casado" value="option2">Casado</label>
 	            </div>	    
 	            <br>    
 	            
 	            <label> Fecha de Nacimiento</label>
-	            <select name="dia" class="span2 inline" style="display:inline;">
+	            <select id="dia" name="dia" class="span2 inline" style="display:inline;">
 	            <?php
 		            for($d=1;$d<=31;$d++)
 		            {
@@ -144,7 +146,7 @@ if (check_login_status() == false) {
 			    ?>
 			    </select>
 			    
-			    <select name="mes" class="span2 inline" style="display:inline;">
+			    <select id="mes" name="mes" class="span2 inline" style="display:inline;">
 			    <?php
 				    for($m = 1; $m<=12; $m++)
 				    {
@@ -172,7 +174,7 @@ if (check_login_status() == false) {
 				?>
 				</select>
 				
-				<select name="anio" class="span2 inline" style="display:inline;">
+				<select id="anio" name="anio" class="span2 inline" style="display:inline;">
 				<?php
 					$tope = date("Y");
 					$edad_max = 45;
@@ -183,10 +185,10 @@ if (check_login_status() == false) {
 				</select>
 	            
 	            <label>Telefono 1</label>
-	            <input type="text" class="span5" placeholder=".....">
+	            <input name="fono1" id="fono1" type="text" class="span5" placeholder=".....">
 
 	            <label>Telefono 2</label>
-	            <input type="text" class="span5" placeholder=".....">
+	            <input name="fono2" id="fono2" type="text" class="span5" placeholder=".....">
 	            
 	            <br>
 		        <button type="submit" class="btn btn-success">Crear Usuario</button>
@@ -198,7 +200,7 @@ if (check_login_status() == false) {
       <hr>
 
       <footer>
-        <p>&copy; PAPAJA 2012</p>
+        <p>&copy; PPJ 2012</p>
       </footer>
 
     </div><!--/.fluid-container-->

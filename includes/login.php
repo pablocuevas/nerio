@@ -12,9 +12,8 @@ if ($_SESSION['logged_in'] == true) {
               redirect('../index.php'); 
 } else { 
               // Make sure that user submitted a username/password and username only consists of alphanumeric chars 
-              if ( (!isset($_POST['username'])) || (!isset($_POST['password'])) OR 
-                   (!ctype_alnum($_POST['username'])) ) { 
-                            redirect('../index.php'); 
+              if ( (!isset($_POST['username'])) || (!isset($_POST['password']))) { 
+                            redirect('home'); 
               } 
   
               // Connect to database 
@@ -51,17 +50,26 @@ if ($_SESSION['logged_in'] == true) {
                      $tipo_usuario = $row['desc_rol'];
               }
               
+               $sql3 = "SELECT usuario.nombre, usuario.apellido FROM roles, usuario WHERE usuario.id_usuario =". $id_usuario . " AND usuario.roles_id_rol = roles.id_rol";
+              
+              $result3 = $mysqli->query($sql3); 
+              
+              while ($row = $result3->fetch_assoc()){
+                     $nombre_usuario = $row['nombre'] . " " . $row['apellido'] ;
+              }
+              
               //echo ($tipo_usuario);
               
               // Set session variable for login status to true 
                            
                             $_SESSION['logged_in'] = true; 
                             $_SESSION['tipo_usuario'] = $tipo_usuario; 
-                            
+                            $_SESSION['nombre_usuario'] = $nombre_usuario; 
+                                                       
 	                        redirect($_SESSION['tipo_usuario']); 
               } else { 
                             // If number of rows returned is not one, redirect back to login screen 
-                            redirect('../index.php'); 
+                            redirect('home'); 
               } 
 } 
 ?>
