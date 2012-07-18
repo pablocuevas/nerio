@@ -111,19 +111,13 @@ if (check_login_status() == true) {
   <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
   <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
-	    	
-	    	
-	    	<!--Body content-->
-	    		<h1>Administration Panel</h1> 
-	    		<p>You are currently logged in. You may log out using the button below.</p> 
-	    		<p><a href="includes/logout.php">Log Out</a></p> 
 	    	</div>
 	    </div>
 	   </div>
       <hr>
 
       <footer>
-        <p>&copy; PAPAJA 2012</p>
+        <p>&copy; PPJ 2012</p>
       </footer>
 
     </div><!--/.fluid-container-->
