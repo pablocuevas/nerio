@@ -86,7 +86,7 @@ if (check_login_status() == true) {
 	    			</fieldset> 
 	    			</form> 
 	    	</div>
-	    	<div class="span8">
+	    	<div class="span7">
 	    	<div id="myCarousel" class="carousel slide">
   <!-- Carousel items -->
   <div class="carousel-inner">
