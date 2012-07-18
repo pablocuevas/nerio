@@ -8,7 +8,7 @@ include('../../includes/functions.inc.php');
 // If logged in, unset session variable and display logged-out message 
 if (check_login_status() == false) { 
               // Redirect to 
-              redirect('../../index.php'); 
+              redirect('home'); 
 }
 ?>
 
@@ -86,12 +86,10 @@ if (check_login_status() == false) {
         <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header">Fichas</li>
-              <li class="active"><a href="administrador.php">Evaluación</a></li>
-              <li><a href="addUsers.php"><i class="icon-plus"></i>Anamnesis</a></li>
-              <li class="nav-header">Rutinas</li>
-               <li class="active"><a href="administrador.php">Cardiovascular</a></li>
-              <li><a href="addUsers.php"><i class="icon-plus"></i>Muscular</a></li>
+              <li><a href="evaluacion.php"><i class="icon-chevron-right"></i>EvaluaciÃ³n</a></li>
+              <li><a href="anamnesis.php"><i class="icon-chevron-right"></i>Anamnesis</a></li>
+              <li><a href="cardiovascular.php"><i class="icon-chevron-right"></i>Cardiovascular</a></li>
+              <li><a href="muscular.php"><i class="icon-chevron-right"></i>Muscular</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->

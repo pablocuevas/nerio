@@ -4,16 +4,17 @@ session_start();
   
 // Include required functions file 
 require_once('../../includes/functions.inc.php'); 
+require_once('../../includes/config.inc.php');
   
 // If not logged in, redirect to login screen 
 // If logged in, unset session variable and display logged-out message 
 if (check_login_status() == false) { 
               // Redirect to 
-              redirect('../../index.php'); 
+              redirect('home'); 
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <title>NERIO</title>
@@ -45,12 +46,7 @@ if (check_login_status() == false) {
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../../assets/ico/apple-touch-icon-57-precomposed.png">
-    
-    <script type="text/javascript">
-    	$('#myModal').modal('hide')
-    </script>
   </head>
-  
 
   <body>
 
@@ -62,7 +58,6 @@ if (check_login_status() == false) {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          
           <a class="brand" href="../../index.php">NERIO</a>
           <div class="btn-group pull-right">
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
@@ -93,49 +88,98 @@ if (check_login_status() == false) {
             <ul class="nav nav-list">
               <li class="nav-header">Acciones</li>
               <li><a href="administrador.php">Inicio</a></li>
-              <li><a href="addUsers.php"><i class="icon-plus"></i>Agregar Usuarios</a></li>
-              <li class="active"><a href="admUsers.php"><i class="icon-pencil"></i>Administrar Usuarios</a></li>
+              <li class="active"><a href="addUsers.php"><i class="icon-plus"></i>Agregar Usuarios</a></li>
+              <li><a href="admUsers.php"><i class="icon-pencil"></i>Administrar Usuarios</a></li>
               <li class="nav-header">Reportes</li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
-        	<?php echo(mostrarUsuarios()) ?>
-        	
-			<ul class="pager">
-				<li class="previous disabled">
-					<a href="#">&larr; Anterior</a>
-				</li>
-				<li class="next disabled">
-					<a href="#">Siguiente &rarr;</a>
-				</li>
-			</ul>
+		
+		<?php 
+		
+		switch($_POST['rol']){
+            case 'option1':
+               $rol =  '4';
+               break;
+            case 'option2':
+               $rol = '2';
+               break;
+            case 'option3':
+               $rol =  '3';
+               break;
+            default:
+               echo ( 'error');
+         }
+         
+         switch($_POST['sexo']){
+            case 'option1':
+               $sexo = 'Masculino';
+               break;
+            case 'option2':
+               $sexo =  'Femenino';
+               break;
+            default:
+               echo ( 'error');
+         }
 
+         switch($_POST['estado_civil']){
+            case 'option1':
+               $estado_civil = 'Soltero';
+               break;
+            case 'option2':
+               $estado_civil = 'Casado';
+               break;
+            default:
+               echo ( 'error');
+         }
 
-			   
-        </div><!--/span-->
-        
-      </div><!--/row-->
-      <hr>
+         $fecha_nacimiento = $_POST["anio"].'-'.$_POST["mes"].'-'.$_POST["dia"];
+		
+		if(isset($_POST['email']) && !empty($_POST['email']) && 
+			isset($_POST['nombres']) && !empty($_POST['nombres']) && 
+			isset($_POST['apellidos']) && !empty($_POST['apellidos']) && 
+			isset ($_POST['fono1']) && !empty($_POST['fono1']) && 
+			isset ($_POST['nombre_usuario']) && !empty($_POST['nombre_usuario'])&& 
+			isset ($_POST['contrasenia']) && !empty($_POST['contrasenia'])&& 
+			isset ($_POST['estado_civil']) && !empty($_POST['estado_civil'])&& 
+			isset ($_POST['sexo']) && !empty($_POST['sexo'])&& 
+			isset ($_POST['rol']) && !empty($_POST['rol'])) { 
+			
+		$mysqli = @new mysqli(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+	
+	$sqlinsertar = "INSERT into usuario ( email , nombre, apellido, sexo, estado_civil, fecha_nac, fono_1, fono_2, usuario, contrasena, roles_id_rol) values ( '" . $_POST["email"] ."' , '". $_POST["nombres"] ."' , '". $_POST["apellidos"] ."' , '". $sexo ."' , '". $estado_civil ."' , '". $fecha_nacimiento ."' , '". $_POST["fono1"] ."' , '". $_POST["fono2"] ."' , '". $_POST["nombre_usuario"] ."' , '". $_POST["contrasenia"] ."' , '". $rol ."' )";
+              
+        $result = $mysqli->query($sqlinsertar); 
+              
+//    echo("INSERT into usuario ( email , nombre, apellido, sexo, estado_civil, fecha_nac, fono_1, fono_2, usuario, contrasena, roles_id_rol) values ( '" . $_POST["email"] ."' , '". $_POST["nombres"] ."' , '". $_POST["apellidos"] ."' , '". $sexo ."' , '". $estado_civil ."' , '". $fecha_nacimiento ."' , '". $_POST["fono1"] ."' , '". $_POST["fono2"] ."' , '". $_POST["nombre_usuario"] ."' , '". $_POST["contrasenia"] ."' , '". $rol ."' )");
+		      
+		      
+		 if($result == 'true'){
+			echo( '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button><strong>Muy bien!</strong> El usuario'. $_POST["nombre_usuario"] .' ha sido creado exitosamente</div>');			 
+		 }else{			 
+			echo(' <div class="alert alert-error"><button type="button" class="close" data-dismiss="alert">×</button><strong>Error</strong>Intente crear nuevamente el usuario</div>');
+		 }
+		 }else{
+			 echo(' <div class="alert alert-error"><button type="button" class="close" data-dismiss="alert">×</button><strong>Error</strong>Intente crear nuevamente el usuario</div>');
+
+		 }
+         ?>
+         
       
 
+
+           		    
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
       <footer>
-        <p>&copy; PAPAJA 2012</p>
+        <p>&copy; PPJ 2012</p>
       </footer>
 
-    <div class="modal hide fade" id="myModal">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">x</button>
-    <h3>Modal header</h3>
-  </div>
-  <div class="modal-body">
-    <p>One fine body�</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#" class="btn" data-dismiss="modal">Close</a>
-    <a href="#" class="btn btn-primary">Save changes</a>
-  </div>
-</div>
+    </div><!--/.fluid-container-->
 
     <!-- Le javascript
     ================================================== -->
@@ -153,7 +197,6 @@ if (check_login_status() == false) {
     <script src="../../assets/js/bootstrap-collapse.js"></script>
     <script src="../../assets/js/bootstrap-carousel.js"></script>
     <script src="../../assets/js/bootstrap-typeahead.js"></script>
-    <script type="text/javascript">$('#myModal').modal(show)</script>
 
   </body>
 </html>

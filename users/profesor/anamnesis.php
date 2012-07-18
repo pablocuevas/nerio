@@ -85,11 +85,10 @@ if (check_login_status() == false) {
         <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header">Acciones</li>
-              <li><a href="administrador.php">Inicio</a></li>
-              <li class="active"><a href="addUsers.php"><i class="icon-plus"></i>Agregar Usuarios</a></li>
-              <li><a href="admUsers.php"><i class="icon-pencil"></i>Administrar Usuarios</a></li>
-              <li class="nav-header">Reportes</li>
+              <li><a href="evaluacion.php"><i class="icon-chevron-right"></i>Evaluación</a></li>
+              <li class="active"><a href="anamnesis.php"><i class="icon-chevron-right"></i>Anamnesis</a></li>
+              <li><a href="cardiovascular.php"><i class="icon-chevron-right"></i>Cardiovascular</a></li>
+              <li><a href="muscular.php"><i class="icon-chevron-right"></i>Muscular</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
