@@ -147,7 +147,14 @@ if (check_login_status() == false) {
 				?>
 				</select>
 				
-	          	<label>Tipo</label><select name="tipo">
+				<label>Alumno</label>
+				<?php echo(comboAlumnos()) ?>
+	            
+	            <label>Profesor</label>
+	            <?php echo(comboProfesor()) ?>
+				
+	          	<label>Tipo</label>
+	          		<select name="tipo">
 					<option>.....</option></br>
 					<option>Bicicleta</option></br>
 					<option>Elíptica</option></br>

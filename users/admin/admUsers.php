@@ -120,7 +120,7 @@ if (check_login_status() == false) {
       
 
       <footer>
-        <p>&copy; PAPAJA 2012</p>
+        <p>&copy; PPJ 2012</p>
       </footer>
 
     <div class="modal hide fade" id="myModal">

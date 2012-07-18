@@ -147,6 +147,13 @@ if (check_login_status() == false) {
 					echo "<option value='$a'>$a</option>"; 
 				?>
 				</select>
+				
+				<label>Alumno</label>
+				<?php echo(comboAlumnos()) ?>
+	            
+	            <label>Profesor</label>
+	            <?php echo(comboProfesor()) ?>
+				
 	          	       		            
 	            <label>Peso</label>
 					<input name="peso" id="peso" type="text" class="span5" placeholder=".....">

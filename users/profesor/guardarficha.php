@@ -98,6 +98,8 @@ if (check_login_status() == false) {
 		
 		<?php 
 		
+		echo($_POST[]);
+		
 		switch($_POST['rol']){
             case 'option1':
                $rol =  '4';

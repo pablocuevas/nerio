@@ -147,6 +147,13 @@ if (check_login_status() == false) {
 				?>
 				</select>
 				
+				<label>Alumno</label>
+				<?php echo(comboAlumnos()) ?>
+	            
+	            <label>Profesor</label>
+	            <?php echo(comboProfesor()) ?>
+				
+				
 	          	<div class="controls">
 	            	<label>Fuma</label>
 		            <label class="radio inline">

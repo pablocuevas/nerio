@@ -63,7 +63,51 @@ function mostrarUsuarios(){
     return $tabla_usuarios;
 	
 }
-  
+
+
+function comboAlumnos(){
+
+	$mysqli = @new mysqli(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+	
+	$sqlAlumnos = "SELECT `usuario`, `nombre`, `apellido`  FROM `usuario` WHERE `roles_id_rol` = 4";
+              
+    $result = $mysqli->query($sqlAlumnos); 
+              
+    $comboAlumnos =  '<SELECT name="alumnos"><option>...</option>';
+    
+
+    while ($row = $result->fetch_assoc()){
+              
+    	$comboAlumnos .= '<option VALUE="'.$row['usuario'].'">'.$row['nombre'].' '.$row['apellido'].'</option>';  
+    }
+   
+   $comboAlumnos .= '</SELECT>';
+              
+    return $comboAlumnos;
+	
+}
+
+function comboProfesor(){
+
+	$mysqli = @new mysqli(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+	
+	$sqlProfesores = "SELECT `usuario`, `nombre`, `apellido`  FROM `usuario` WHERE `roles_id_rol` = 2";
+              
+    $result = $mysqli->query($sqlProfesores); 
+              
+    $comboProfesores =  '<SELECT name="profesor"><option>...</option>';
+    
+
+    while ($row = $result->fetch_assoc()){
+              
+    	$comboProfesores .= '<option VALUE="'.$row['usuario'].'">'.$row['nombre'].' '.$row['apellido'].'</option>';  
+    }
+   
+   $comboProfesores .= '</SELECT>';
+              
+    return $comboProfesores;
+	
+}
 /** 
 * Check login status 
 * 
