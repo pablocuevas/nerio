@@ -95,32 +95,7 @@ if (check_login_status() == false) {
         <div class="span9">
 		<h1>FORMULARIO DE ANAMNESIS</h1>
             <form class="well" name="insertUser" method="POST" action="insertUser.php">
-	          	<div class="controls">
-	            	<label>Fuma</label>
-		            <label class="radio inline">
-	            	<input type="radio" name="fuma" id="fuma" value="option1" checked="">Si</label>
-	            	<label class="radio inline">
-	            	<input type="radio" name="fuma" id="fuma" value="option2">No</label>
-	            </div></br>
-				<label>Frecuencia</label>
-					<input name="frec_fuma" id="frec_fuma" type="text" class="span5" placeholder=".....">
-	           <div class="controls">
-	            	<label>Alcohol</label>
-		            <label class="radio inline">
-	            	<input type="radio" name="alcohol" id="alcohol" value="option1" checked="">Si</label>
-	            	<label class="radio inline">
-	            	<input type="radio" name="alcohol" id="alcohol" value="option2">No</label>
-	            </div></br>
-				<label>Frecuencia</label>
-					<input name="frec_alcohol" id="frec_alcohol" type="text" class="span5" placeholder=".....">
-	            <label></label>
-				<label>Enfermedades</label>
-					<input name="enfermedades" id="enfermedades" type="text" class="span5" placeholder=".....">
-				<label>Medicamentos</label>
-					<input name="enfermedades" id="enfermedades" type="text" class="span5" placeholder=".....">	
-	            <div class="controls">
-	            		            
-	            <label> Fecha</label>
+             <label> Fecha</label>
 	            <select id="dia" name="dia" class="span2 inline" style="display:inline;">
 	            <?php
 		            for($d=1;$d<=31;$d++)
@@ -171,9 +146,35 @@ if (check_login_status() == false) {
 					echo "<option value='$a'>$a</option>"; 
 				?>
 				</select>
+				
+	          	<div class="controls">
+	            	<label>Fuma</label>
+		            <label class="radio inline">
+	            	<input type="radio" name="fuma" id="fuma" value="option1" checked="">Si</label>
+	            	<label class="radio inline">
+	            	<input type="radio" name="fuma" id="fuma" value="option2">No</label>
+	            </div></br>
+				<label>Frecuencia</label>
+					<input name="frec_fuma" id="frec_fuma" type="text" class="span5" placeholder=".....">
+	           <div class="controls">
+	            	<label>Alcohol</label>
+		            <label class="radio inline">
+	            	<input type="radio" name="alcohol" id="alcohol" value="option1" checked="">Si</label>
+	            	<label class="radio inline">
+	            	<input type="radio" name="alcohol" id="alcohol" value="option2">No</label>
+	            </div></br>
+				<label>Frecuencia</label>
+					<input name="frec_alcohol" id="frec_alcohol" type="text" class="span5" placeholder=".....">
+	            <label></label>
+				<label>Enfermedades</label>
+					<input name="enfermedades" id="enfermedades" type="text" class="span5" placeholder=".....">
+				<label>Medicamentos</label>
+					<input name="enfermedades" id="enfermedades" type="text" class="span5" placeholder=".....">	
+	            <div class="controls">
+	            		            
 	            
 	            <label>Observaciones</label>
-	            <input name="observacion" id="observacion" type="text" class="span5" placeholder=".....">
+	            <textarea name="observacion" id="observacion" class="input-xlarge" id="textarea" rows="6"></textarea>
 
 	            <br>
 		        <button type="submit" class="btn btn-success">Agregar Ficha</button>

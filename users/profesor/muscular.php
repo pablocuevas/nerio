@@ -95,6 +95,58 @@ if (check_login_status() == false) {
         <div class="span9">
 		<h1>Ficha Musculaci&oacute;n</h1>
             <form class="well" name="insertUser" method="POST" action="insertUser.php">
+             <label> Fecha</label>
+	            <select id="dia" name="dia" class="span2 inline" style="display:inline;">
+	            <?php
+		            for($d=1;$d<=31;$d++)
+		            {
+			            if($d<10)
+			            $dd = "0" . $d;
+			            else
+			            $dd = $d;
+			            echo "<option value='$dd'>$dd</option>";
+			        }
+			    ?>
+			    </select>
+			    
+			    <select id="mes" name="mes" class="span2 inline" style="display:inline;">
+			    <?php
+				    for($m = 1; $m<=12; $m++)
+				    {
+					if($m<10)
+						$me = "0" . $m;
+					else
+						$me = $m;
+					switch($me)
+					{
+						case "01": $mes = "Enero"; break;
+						case "02": $mes = "Febrero"; break;
+						case "03": $mes = "Marzo"; break;
+						case "04": $mes = "Abril"; break;
+						case "05": $mes = "Mayo"; break;
+						case "06": $mes = "Junio"; break;
+						case "07": $mes = "Julio"; break;
+						case "08": $mes = "Agosto"; break;
+						case "09": $mes = "Septiembre"; break;
+						case "10": $mes = "Octubre"; break;
+						case "11": $mes = "Noviembre"; break;
+						case "12": $mes = "Diciembre"; break;			
+					}
+					echo "<option value='$me'>$mes</option>";
+					}
+				?>
+				</select>
+				
+				<select id="anio" name="anio" class="span2 inline" style="display:inline;">
+				<?php
+					$tope = date("Y");
+					$edad_max = 45;
+					$edad_min = 0;
+					for($a= $tope - $edad_max; $a<=$tope - $edad_min; $a++)
+					echo "<option value='$a'>$a</option>"; 
+				?>
+				</select>
+				
 	          	<label>Ejercicio</label><select name="ejercicio">
 					<option>.....</option></br>
 					<option>Abdominales</option></br>
@@ -154,62 +206,9 @@ if (check_login_status() == false) {
 					<option>95</option></br>
 					<option>100</option></br>
 					</select></br>
-					            		            
-	            <label> Fecha</label>
-	            <select id="dia" name="dia" class="span2 inline" style="display:inline;">
-	            <?php
-		            for($d=1;$d<=31;$d++)
-		            {
-			            if($d<10)
-			            $dd = "0" . $d;
-			            else
-			            $dd = $d;
-			            echo "<option value='$dd'>$dd</option>";
-			        }
-			    ?>
-			    </select>
-			    
-			    <select id="mes" name="mes" class="span2 inline" style="display:inline;">
-			    <?php
-				    for($m = 1; $m<=12; $m++)
-				    {
-					if($m<10)
-						$me = "0" . $m;
-					else
-						$me = $m;
-					switch($me)
-					{
-						case "01": $mes = "Enero"; break;
-						case "02": $mes = "Febrero"; break;
-						case "03": $mes = "Marzo"; break;
-						case "04": $mes = "Abril"; break;
-						case "05": $mes = "Mayo"; break;
-						case "06": $mes = "Junio"; break;
-						case "07": $mes = "Julio"; break;
-						case "08": $mes = "Agosto"; break;
-						case "09": $mes = "Septiembre"; break;
-						case "10": $mes = "Octubre"; break;
-						case "11": $mes = "Noviembre"; break;
-						case "12": $mes = "Diciembre"; break;			
-					}
-					echo "<option value='$me'>$mes</option>";
-					}
-				?>
-				</select>
-				
-				<select id="anio" name="anio" class="span2 inline" style="display:inline;">
-				<?php
-					$tope = date("Y");
-					$edad_max = 45;
-					$edad_min = 0;
-					for($a= $tope - $edad_max; $a<=$tope - $edad_min; $a++)
-					echo "<option value='$a'>$a</option>"; 
-				?>
-				</select>
 	            
 	            <label>Observaciones</label>
-	            <input name="observacion" id="observacion" type="text" class="span5" placeholder=".....">
-
+	            <textarea name="observacion" id="observacion" class="input-xlarge" id="textarea" rows="6"></textarea>
 	            <br>
 		        <button type="submit" class="btn btn-success">Ingresar Ficha</button>
 		    </form>

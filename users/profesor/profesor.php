@@ -101,23 +101,23 @@ if (check_login_status() == false) {
             <div class="span4">
               <h2>Ficha de Evaluaci&oacute;n</h2>
                 <p>En esta secci&oacute;n mantendr&aacute;n actualizada la informaci&oacute;n respecto a las fichas de evaluaci&oacute;n de cada socio del gimnasio: Peso, porcentaje de grasa, magno, Imc (&iacute;ndice de masa muscular Icc (&iacute;ndice cintura cadera)</p>
-                </br></br><p><a class="btn" href="#">Ingresa aqu&iacute; &raquo;</a></p>
+                </br></br><p><a class="btn" href="evaluacion.php">Ingresa aqu&iacute; &raquo;</a></p>
             </div><!--/span-->
             <div class="span4">
               <h2>Ficha Anamnesis</h2>
                 <p>Informaci&oacute;n m&eacute;dica de cada socio, utilizada para manejar el adecuado asesoramiento, de las actividades f&iacute;sicas que podr&iacute;a realizar cada socio, los datos contenidos pueden ser: fuma (frecuencia), alcohol (Frecuencia), alerg&iacute;as, medicamentos enfermedades</p>
-                </br><p><a class="btn" href="#">Ingresa aqu&iacute; &raquo;</a></p>            </div><!--/span-->
+                </br><p><a class="btn" href="anamnesis.php">Ingresa aqu&iacute; &raquo;</a></p>            </div><!--/span-->
             <div class="span4">
               <h2>Rutina Cardiovascular</h2>
                 <p>Ingreso de las rutinas que correspondan, dependiendo del nivel o avance que vaya presentando cada socio, har&aacute;n referencia al tipo de ejercicio cardiovascular, aqu&iacute; podr&aacute;n aumentar o disminuir los programas y tiempos de ejecuci&oacute;n, se asignara la m&aacute;quina a utilizar, el nivel y el tiempo que permanecer&aacute; realizando el ejercicio</p>
-                <p><a class="btn" href="#">Ingresa aqu&iacute; &raquo;</a></p>
+                <p><a class="btn" href="cardiovascular.php">Ingresa aqu&iacute; &raquo;</a></p>
             </div><!--/span-->
           </div><!--/row-->
           <div class="row-fluid">
             <div class="span4">
               <h2>Rutina Muscular</h2>
                 <p>Al igual que las Rutinas Cardiovascular, deber&aacute;n mantener los programas de ejercicios musculares, los cuales se podr&aacute;n aumentar o disminuir tanto los programas y tiempos de ejecuci&oacute;n, va a depender del ejercicio asignado, como abdominales los cuales se realizaran por una cantidad de repeticiones, diferentes tipos o por tiempo</p>
-                <p><a class="btn" href="#">Ingresa aqu&iacute; &raquo;</a></p>
+                <p><a class="btn" href="muscular.php">Ingresa aqu&iacute; &raquo;</a></p>
             </div><!--/span-->
 
           </div><!--/row-->

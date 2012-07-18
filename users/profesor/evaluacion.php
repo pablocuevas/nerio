@@ -159,7 +159,7 @@ if (check_login_status() == false) {
 				<label>Icc</label>
 					<input name="icc" id="icc" type="text" class="span5" placeholder=".....">
 				<label>Observaciones</label>
-					<input name="observacion" id="observacion" type="text" class="span5" placeholder=".....">
+					<textarea name="observacion" id="observacion" class="input-xlarge" id="textarea" rows="6"></textarea>
 	            <br>
 		        <button type="submit" class="btn btn-success">Agregar Ficha</button>
 		    </form>
