@@ -94,7 +94,7 @@ if (check_login_status() == false) {
         </div><!--/span-->
         <div class="span9">
 		<h1>Ficha Musculaci&oacute;n</h1>
-            <form class="well" name="insertUser" method="POST" action="insertUser.php">
+            <form class="well" name="muscular" method="POST" action="guardarficha.php">
              <label> Fecha</label>
 	            <select id="dia" name="dia" class="span2 inline" style="display:inline;">
 	            <?php
@@ -210,7 +210,7 @@ if (check_login_status() == false) {
 	            <label>Observaciones</label>
 	            <textarea name="observacion" id="observacion" class="input-xlarge" id="textarea" rows="6"></textarea>
 	            <br>
-		        <button type="submit" class="btn btn-success">Ingresar Ficha</button>
+		        <button type="submit" class="btn btn-success">Agregar Ficha</button>
 		    </form>
 		    
         </div><!--/span-->

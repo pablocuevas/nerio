@@ -94,7 +94,7 @@ if (check_login_status() == false) {
         </div><!--/span-->
         <div class="span9">
 		<h1>Ficha Evaluci&oacute;n</h1>
-            <form class="well" name="insertUser" method="POST" action="insertUser.php">
+            <form class="well" name="evaluacion" method="POST" action="guardarficha.php">
 			
 				<label> Fecha</label>
 	            <select id="dia" name="dia" class="span2 inline" style="display:inline;">
